@@ -68,3 +68,7 @@ This section has moved here: https://facebook.github.io/create-react-app/docs/de
 This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
 
 test
+
+ <h2>pour garder des folders vides: </h2>
+      <code>.gitkeep</code> dans le folder
+      <hr />

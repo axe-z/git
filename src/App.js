@@ -95,16 +95,92 @@ index 4d29575..e36b9bc 100644
       <h2> git reset HEAD nomDuFichier.js</h2>
       <p>
         permet si on a fait git status et git add nomDuFichier.js ou . , de l enlever du prochain
-        commit
+        commit - (use "git reset HEAD "file">..." to unstage)
       </p>
       <hr />
-      {/* // */}
-      {/* // */}
-      {/* // */}
-      {/* // */}
-      <h2>pour garder des folders vides: </h2>
-      <code>.gitkeep</code> dans le folder
+      <h1>Pour revenir a l etat du dernier commit pour un fichier</h1>
       <hr />
+      <h2> git checkout -- nomDuFichier.js</h2>
+      <p>
+        les dernieres modification de se fichier seront annulé , de retour a l etat du dernier
+        commit.
+      </p>
+      <p>c'est de alt-z mais par git</p>
+      <hr />
+      <h1>Pour voir une historique de nos commit git (plus recent en haut)</h1>
+      <hr />
+      <h2> git log --oneline --graph --decorate --all</h2>
+      <p>git help log (permet de voir tous les options)</p>
+      <p>* c201745 (HEAD -> master) add readme</p>
+      <p>* 9a8e06a sans add</p>
+      <p>* 8f92023 test </p>
+      <p>* 314a4ea init</p>
+      <p>* 3537e80 Initial commit from Create React App</p>
+      <hr />
+      <h1>ALIAS - se faire des raccourcis</h1>
+      <hr />
+      <h2>git config --global alias.NomDuRacc "log --oneline --graph --decorate --all"</h2>
+      <p>ceci permet de faire le raccourcis au niveau global, pour eviter les longue commandes</p>
+      <p>pour utiliser la commande : </p>
+      <h2>juste: git hist</h2>
+      <p>
+        {" "}
+        donc maintenant hist vaut "log --oneline --graph --decorate --all" et on peut meme ajouter
+        des options a git hist: git hist --autreOptionsDeLog qui vaut "git log --oneline --graph
+        --decorate --all --autreOptionsDeLog"
+      </p>
+      <p>pour verifier la list de nos alias:</p>
+      <h2>git config --global --list</h2>
+      {/* // */}
+      {/* // */}
+      {/* // */}
+      {/* // */}
+      <hr />
+      <h1> renomer des fichiers avec GIT</h1>
+      <p>
+        on vient d ajouter exemple.txt et fait un commit du fichier, on veut le renomer(pour x
+        raison)... on peut le faire avec l os ou git
+      </p>
+      <h2>git mv exemple.txt nouveauNom.txt</h2>
+      <p>
+        dans l os le fichier est renommer, mais il reste a faire un commit pour terminer l action
+        avec git
+      </p>
+      <hr />
+      <h1> Deleter des fichiers avec GIT</h1>
+      <p>
+        on vient d ajouter exemple.txt et fait un commit du fichier, on veut le supprimer(pour x
+        raison)...
+      </p>
+      <h2>git rm demo.txt</h2>
+      <p>
+        dans l os le fichier est deleter, mais il reste a faire un commit pour terminer l action
+        avec git
+      </p>
+      <h1> Exclusion de fichier .gitignore</h1>
+      <p>une ligne par exclusion</p>
+      <p>si on veut tout enlever dune certaine extension (fichiers log) : *.log</p>
+      <h2>git rm demo.txt</h2>
+      <p>
+        dans l os le fichier est deleter, mais il reste a faire un commit pour terminer l action
+        avec git
+      </p>
+      <br />
+      <br />
+      <br />
+      <hr />
+      <h1>Comparaisons de fichiers avec les commandes diff</h1>
+      <p>
+        par exemple avec la commande alias qu on a fait: git hist on pourra voir tous les commit de
+        fait dans le projet
+      </p>
+      <p>* c201745 (HEAD -> master) add readme</p>
+      <p>* 9a8e06a sans add</p>
+      <p>* 8f92023 test </p>
+      <p>* 314a4ea init</p>
+      <p>* 3537e80 Initial commit from Create React App</p>
+      <h2>git diff idDuCommit(8f92023) etAutrePointer(3537e80)</h2>
+      <p>on verra tous les changement entre les 2 point de reference (commit)</p>
     </div>
   );
 }
