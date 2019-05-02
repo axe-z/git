@@ -75,6 +75,20 @@ Date:   Wed May 1 19:03:19 2019 -0400
 index 4d29575..e36b9bc 100644
 --- a/.gitignore
 +++ b/.gitignore`}
+      <hr />
+      <h1>voir le tracking de quels files</h1>
+      <hr />
+      <h2>git ls-files</h2>
+      <code>
+        .gitignore README.md package.json public/favicon.ico public/index.html public/manifest.json
+        src/App.css src/App.js src/App.test.js src/index.css src/index.js src/logo.svg
+        src/serviceWorker.js yarn.lock
+      </code>
+      <hr />
+      <h1> </h1>
+      <hr />
+      <h2> </h2>
+      <code />
       {/* // */}
       {/* // */}
       {/* // */}
