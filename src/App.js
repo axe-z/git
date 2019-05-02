@@ -93,6 +93,7 @@ index 4d29575..e36b9bc 100644
       <h1>Enlever (avant commit) Un fichier updaté et added au staging</h1>
       <hr />
       <h2> git reset HEAD nomDuFichier.js</h2>
+      <p>Head est un pointer du dernier commit</p>
       <p>
         permet si on a fait git status et git add nomDuFichier.js ou . , de l enlever du prochain
         commit - (use "git reset HEAD "file">..." to unstage)
@@ -181,6 +182,28 @@ index 4d29575..e36b9bc 100644
       <p>* 3537e80 Initial commit from Create React App</p>
       <h2>git diff idDuCommit(8f92023) etAutrePointer(3537e80)</h2>
       <p>on verra tous les changement entre les 2 point de reference (commit)</p>
+      <h2>voir les diff depuis derniers commit : git diff</h2>
+      <p>on verra les lignes et modifications</p>
+      <br />
+      <br />
+      <br />
+      <hr />
+      <h1>Branching et Merging</h1>
+      <p>les branches sont un timeline de commit, leur nom sont des labels</p>
+      <p>le merge est ramener une branche sur le master</p>
+      <p>
+        le "fast forward merge" arrive quand depuis trop longtemps on est que sur une branche sans
+        changement sur le master. ( ca se desactive )
+      </p>
+      <p>le "automatique merge" ne creer pas de conflit</p>
+      <p>le "merge manuel", c'est quand git est pas capable de le faire sans conflits. </p>
+      <h2>git branch (retourne la branche sur laquelle on est)</h2>
+      <p>* master ( en vert )</p>
+      <hr />
+      <h2>git checkout -b updates </h2>
+      <p>Switched to a new branch 'updates'</p>
+      <p>Ceci amnene TOUT CE QUI EST PENDING (PAS COMMIS) sur cette branch</p>
+      <p>on va faire notre commit ( git add . et git commit -m "ajout a la branche update") </p>
     </div>
   );
 }
