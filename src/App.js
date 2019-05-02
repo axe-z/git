@@ -85,10 +85,19 @@ index 4d29575..e36b9bc 100644
         src/serviceWorker.js yarn.lock
       </code>
       <hr />
-      <h1> </h1>
+      <h1>Commit sans add</h1>
       <hr />
-      <h2> </h2>
-      <code />
+      <h2> git commit -am "sans add"</h2>
+      <p>permet de skiper le add au staging area</p>
+      <hr />
+      <h1>Enlever (avant commit) Un fichier updaté et added au staging</h1>
+      <hr />
+      <h2> git reset HEAD nomDuFichier.js</h2>
+      <p>
+        permet si on a fait git status et git add nomDuFichier.js ou . , de l enlever du prochain
+        commit
+      </p>
+      <hr />
       {/* // */}
       {/* // */}
       {/* // */}
