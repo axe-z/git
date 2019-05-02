@@ -204,6 +204,18 @@ index 4d29575..e36b9bc 100644
       <p>Switched to a new branch 'updates'</p>
       <p>Ceci amnene TOUT CE QUI EST PENDING (PAS COMMIS) sur cette branch</p>
       <p>on va faire notre commit ( git add . et git commit -m "ajout a la branche update") </p>
+      <p>
+        si on fait maintenant git status : On branch updates nothing to commit, working tree clean
+      </p>
+      <hr />
+      <h2>git hist (retourne toujours l historique) maintenat on voit le switch</h2>
+      <p>si on veut voir les DIFF entre le master et la branch updates: </p>
+      <h2>git diff updates master </h2>
+      <hr />
+      <h2>pour switcher de branch : git checkout nomDeLaBranche</h2>
+      <p>donc master ou updates dans notre cas</p>
+      <hr />
+      <h2>si on a fini avec notre branche updates et on veut la ramener</h2>
     </div>
   );
 }
