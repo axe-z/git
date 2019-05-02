@@ -24,6 +24,8 @@ function App() {
       <br />
       <code>git init -y</code>
       <br />
+      <code>git init .</code>
+      <br />
       <code>git init nomDeFolder</code>
       <br />
       <h2>Git a 4 states: </h2>
@@ -32,16 +34,47 @@ function App() {
       <p>3-le folder .git (local)</p>
       <p>4-le repo .git (sur github.com)</p>
       <hr />
-      <h2>Les commandes pour syncquer le workflow et le .git</h2>
+      <h2>Les commandes pour syncquer le workflow et le .git LOCALEMENT</h2>
       <p>git status</p> <em>presente les fichiers dans le rep initial ou modifies</em>
       <p>git add . ( . = tout) sinon ca peut etre le nom du fichier</p>{" "}
-      <em>ajoute a la liste des choses a.gitter</em>
+      <em>ajoute a la liste des choses a .gité </em>
       <p>
         si on fait "git status" a nouveau , les fichiers ajouter par git add , seront montres dans
         la portion 2-le staging area
       </p>
       <p>git commit -m "message" </p>
       <em>va lui envoyer du stage 2-stging area au stage 3- le .git local</em>
+      <p>[master 314a4ea] (id du git) init (nom du commit)</p>
+      <h2>L'interieur du .git</h2>
+      <p>
+        COMMIT_EDITMSG - config - hooks - info - objects - HEAD - description - index - logs - refs
+      </p>
+      <h2>detruire le git</h2>
+      <p>rm -rf .git</p>
+      <hr />
+      <h1>historique</h1>
+      <hr />
+      <h2>git log</h2>
+      <p>permet de voir nos actions de commit passees</p>
+      <p>
+        on y voit le ID du commit, le Author, la date du commit, et le message du -m (initial
+        commit)
+      </p>
+      <p>le terminal reviens pas au prompt, mais a ":" Q (minuscule) va sortir de la </p>
+      <code>
+        {`commit 314a4ea0aab2969bc116d103d5b62b8a8cf00c (HEAD -> master)
+Author: axe-z <info@axe-z.com>
+Date:   Wed May 1 19:03:19 2019 -0400
+ 
+ `}
+      </code>
+      <h2>git show</h2>
+      <p>permet de voir le detail du DERNIER commit, et les fichiers diff.</p>
+      <p>le terminal reviens pas au prompt, mais a ":" Q (minuscule) va sortir de la </p>
+      {`diff --git a/.gitignore b/.gitignore
+index 4d29575..e36b9bc 100644
+--- a/.gitignore
++++ b/.gitignore`}
       {/* // */}
       {/* // */}
       {/* // */}
