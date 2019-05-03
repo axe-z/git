@@ -507,6 +507,76 @@ index 4d29575..e36b9bc 100644
         develop
       </p>
       <p>ca se fait sur github, on va sur la branch (code pour FAQ), on click new pull request </p>
+      <p>on peut ecrire dans le dialog box nos infos</p>
+      <hr />
+      <hr />
+      <hr />
+      <hr />
+      <h1 style={{ color: "red" }}>YARN WORKSPACES</h1>
+      <p>creer une app. rep de depart est monapp</p>
+      <p>le setup dans le package.json de monapp</p>
+      <code>` "private": true, "wokspaces": ["common", "server"] ou wte... `</code>
+      <p>on creer a la racine deux folders, common et server</p>
+      <p>cd common , et on fait :yarn init -y</p>
+      <p>on fait la meme chose dans server: yarn init -y </p>
+      <p>
+        {" "}
+        voir video <a href="https://www.youtube.com/watch?v=G8KXFWftCg0"> ICI </a>
+      </p>
+      <p>
+        {" "}
+        dans le rep common, faire un index.js , dedans, faire un module.exports = unNamed fn, qui a
+        comme interieur, genre console.log ( allo de 'common')
+      </p>
+      <p>
+        faire ensuite un index.js dans le rep server. et importer const commonFn =
+        require('common')(pas de path) et ensuite juste appeler la fn, commonFn()
+      </p>
+      <p>
+        maintenant dans le package.json de server, on doit mettre le rep common en dependencies:
+        "dependencies": entre brackets, "common": "1.0.0"
+      </p>
+      <p>
+        de server, dnas le terminal on fait maintenant : yarn install , ce qui va creer le lien
+        entre les 2 reps{" "}
+      </p>
+      <p>
+        si on retourne a la racine: on fait ls (list les files) on verra node_module, meme si pas
+        visible dans le tree. si on fait : ls node_modules , on va voir: common server
+      </p>
+      <p>
+        maintenant que le lien est fait: si on roule du root: node/server/index.js , le console.log
+        de common va sortir, si on fait des changement a common, et relance node/server/index.js ,
+        pas de compilation a faire tout fonctionne rapidement.
+      </p>
+      <h2 style={{ color: "red" }}>changer les noms pour demontrer le link (naming structure)</h2>
+      <p>
+        dans le rep de common, le package.json il est suggeré de mettre à "name": "common" une
+        reference au projet devient: "name": "@monapp/common"
+      </p>
+      <p>meme chose dnas le package du rep server: "name": "@monapp/server"</p>
+      <p>
+        il ne faut pas oublieé de changer dans server la dependencies: "@monapp/common": "1.0.0"
+      </p>
+      <p>meme chose pour le index.js de server: const commonFn = require('@monapp/common') </p>
+      <p>
+        IMPORTANT - on doit refaire le yarn install, ensuite tester avec node/server/index.js si
+        tout fonctionne
+      </p>
+      <h2 style={{ color: "red" }}>babel utilise ce system, maintenant mettre ca dans packages.</h2>
+      <p>crer au root un rep packages, y mettre common et server</p>
+      <p>on devra biensur ajuster le package.json du root: "workspace: [ "packages/*"]</p>
+      <p>donc pu de "common" et "server"</p>
+      <p>
+        au root delete le node_module: <strong>rm -rf node_modules/</strong>
+      </p>
+      <p>yarn install, ensuite tester: node packages/server/index.js</p>
+      <h2>maintenant quand on install tout va dans le root a un endroit pour back et front end</h2>
+      <p>
+        si on va dans cd packages/server , et yarn install express, express sera pas dans server
+        mais dans le root.{" "}
+      </p>
+      <h2 style={{ color: "red" }}>Avec react et react-native</h2>
     </div>
   );
 }
