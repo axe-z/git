@@ -328,7 +328,41 @@ index 4d29575..e36b9bc 100644
       </p>
       <p>2 fois le meme url , un pour fetch et l autre push, 99.999 du temps c est pour push</p>
       <h2>git push -u origin(le nom qu o na mis) master(la branche)</h2>
-      <h1 />
+      <br />
+      <br />
+      <h1>SSH auth VS https</h1>
+      <p>
+        par https, donc sans ssh key de montee, chaque push demandera d entrer son name / password
+        ... ark
+      </p>
+      <h2>generer une key ssh</h2>
+      <p>
+        du terminal en ouvrant: ls .ssh (si le folder est vide, mkdir .ssh, pour creer le folder)
+      </p>
+      <p>si on y voit id_rsa et id_rsa.pub, on est ok</p>
+      <p>cd .ssh/ , pour aller dans le folder</p>
+      <p>le code pour en generer une:</p>
+      <h2>ssh-keygen -t rsa -C "notreEmailAdresse"</h2>
+      <p>il sera genere uun public/private rsa key pair( id_rsa et id_rsa.pub)</p>
+      <p>on peut ajouter optionnelement un motdepasse</p>
+      <p>la cle nous rejoidra gerigire-og-0rekpogejojkgporekpore... </p>
+      <p>ls -al devrait montrer les 2 fichiers rsa</p>
+      <p>ouvrir la version id_rsa.pub (public)avec un editeur et copier la key</p>
+      <p>selectionner le contenu entier, ssh-rsa key et adresse email et copier command-c</p>
+      <p>aller sur github, dans settings, sur le coté , SSH and GPG keys </p>
+      <p>mettre en titre une description de la station et dans le key textbox, paste le key</p>
+      <p>faudra entrer ensuite notre mot de passe github</p>
+      <p>pour verifier que l ordi peut communiquer avec github avec ssh:</p>
+      <h2>ssh -T git@github.com</h2>
+      <p>repondre yes</p>
+      <p>
+        osX va prompter une demande de passowrd ( de l os ) mettre un crochet pour enregistrer au
+        keychain
+      </p>
+      <p>on devrait avoir un message de felicitation</p>
+      <hr />
+      <h1>tout sur github</h1>
+      <p>on devrait rester local le plus souvent possible et une fois sur, on push sur github</p>
     </div>
   );
 }
