@@ -76,3 +76,6 @@ pp
 gg
 ggr
 ge
+gregre
+reset
+ajout 

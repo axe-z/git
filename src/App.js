@@ -294,6 +294,12 @@ index 4d29575..e36b9bc 100644
       <p>Saved working directory and index state WIP on master: 6331968 frais</p>
       <h2>git stash list</h2>
       <p>stash@{0}: WIP on master: 6331968 frais</p>
+      <hr />
+      <h1>reset et reflog (time travel) --soft --mixed(par defaut) --hard</h1>
+      <h2>git reset idDeCommit --soft (permet d aller dans le temps) et partir de là</h2>
+      <hr />
+      <h1>git reflog (permet de voir tous les action)</h1>
+      <h2 />
     </div>
   );
 }
