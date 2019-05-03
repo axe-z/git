@@ -257,9 +257,39 @@ index 4d29575..e36b9bc 100644
       </p>
       <p>
         change la meme ligne et fait mon commit, les 2 fichiers sont differents, une fois qu on
-        tente le merge, il y aura conflit, vscode donne acces a arranger , directremenet dans le
+        tente le merge, il y aura conflit, vscode donne acces a arranger , directrement dans le
         code. un fois la decision prise sur quoi garder, on commit.{" "}
       </p>
+      <hr />
+      <h1>Git tags</h1>
+      <p>ils sont la quand on arrive a un point qu on veut souligner. sinon c est le head. </p>
+      <p>Un tag c est un label, voici comment: </p>
+      <h2>git tag monTag</h2>
+      <p>maintenant si on fait git hist on verra:</p>
+      <code>* bd76c22 (HEAD -> master, tag: monTag) message du dernier commit</code>
+      <h2>deleter un tag : git tag -d monTag</h2>
+      <br />
+      <h2>Associer des choses a son tag: ANNOTED TAGS</h2>
+      <br />
+      <h2>git tag -a (a pour annoted) v1.0(exemple) -m (pour message) "description 1.0"</h2>
+      <h2>git tag -a v1.0 -m "Sortie 1.0"</h2>
+      <p>bd76c22 (HEAD -> master, tag: v1.0) conflict resolved</p>
+      <h2>pour voir la list de nos tags: git tag --list</h2>
+      <p>v1.0 , mais bon la difference du annoted vient quand on fait:</p>
+      <h2>git show v1.0</h2>
+      <p>
+        on y verra le chemin entre le dernier commit et le dernier tag et sert a marquer des points
+        d importance
+      </p>
+      <p>tag v1.0</p>
+      <p>Tagger: axe-z info@axe-z.com </p>
+      <p>Date: Fri May 3 09:31:28 2019 -0400</p>
+      <p>Sortie 1.0</p>
+      <p>commit bd76c2276858ae28e0998279acd0f2d62e125f44 (HEAD -> master, tag: v1.0)</p>
+      <p>Author: axe-z info@axe-z.com </p>
+      <p>Date: Thu May 2 22:20:13 2019 -0400</p>
+      <hr />
+      <h1>Stashing</h1>
     </div>
   );
 }
