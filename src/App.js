@@ -215,7 +215,29 @@ index 4d29575..e36b9bc 100644
       <h2>pour switcher de branch : git checkout nomDeLaBranche</h2>
       <p>donc master ou updates dans notre cas</p>
       <hr />
-      <h2>si on a fini avec notre branche updates et on veut la ramener</h2>
+      <p>si on a fini avec notre branche updates et on veut la ramener</p>
+      <h2>De master: git merge updates</h2>
+      <p>tout ce qui a ete fait sur update s'en va sur master </p>
+      <p>
+        Fast-forward src/App.js | 35 +++++++++++++++++++++++++++++++++++ 1 file changed, 35
+        insertions(+
+      </p>
+      <p>
+        le systeme a choisi de faire un fast-forward merge, parce que les changement etaient simples
+      </p>
+      <p>
+        si on fait git hist: on verra Head master et updates au meme endroit sur la derniere ligne
+      </p>
+      <h2>si c est la fin de la branche et on veut la deleter: git branch -d nomDeLaBranche</h2>
+      <p>
+        donc si on fait apres le merge git branch -d updates , git hist montre que le master (et
+        HEAD)
+      </p>
+      <br />
+      <br />
+      <br />
+      <hr />
+      <h1>Gerer des conflits</h1>
     </div>
   );
 }
