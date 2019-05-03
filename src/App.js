@@ -6,6 +6,19 @@ function App() {
   return (
     <div className="App">
       <h1>GitTuts version control</h1>
+      <ul>
+        <h3>legende</h3>
+        <li>init = initialise</li>
+        <li>git commit -am (add et commit d'un coup) </li>
+        <li>git breakout (changer de branch)</li>
+        <li>git mv (change de nom)</li>
+        <li>git rm (delete)</li>
+        <li>git diff (voit le difference)</li>
+        <li>git checkout -b nomDeLaBranchAjoutee</li>
+        <li> git merge ( on fait ca de master )</li>
+        <li>git config --global alias.NomDuRacc(hist) "log --oneline --graph --decorate --all"</li>
+        <li>git hist (sort l historique et la place de HEAD)</li>
+      </ul>
       <hr />
       <h2>pour install: </h2>
       <code>dans le terminal: git version</code>
@@ -238,6 +251,15 @@ index 4d29575..e36b9bc 100644
       <br />
       <hr />
       <h1>Gerer des conflits</h1>
+      <p>
+        si par exemple sur master je commit une ligne de read me et vais ensuite sur une nouvelle
+        branche
+      </p>
+      <p>
+        change la meme ligne et fait mon commit, les 2 fichiers sont differents, une fois qu on
+        tente le merge, il y aura conflit, vscode donne acces a arranger , directremenet dans le
+        code. un fois la decision prise sur quoi garder, on commit.{" "}
+      </p>
     </div>
   );
 }

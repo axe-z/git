@@ -74,8 +74,4 @@ test
       <hr />
 pp
 gg
-<<<<<<< HEAD
 ggr
-=======
- 
->>>>>>> conflit
