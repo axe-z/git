@@ -75,8 +75,8 @@ function App() {
       </p>
       <p>le terminal reviens pas au prompt, mais a ":" Q (minuscule) va sortir de la </p>
       <code>
-        {`commit 314a4ea0aab2969bc116d103d5b62b8a8cf00c (HEAD -> master)
-Author: axe-z <info@axe-z.com>
+        {`commit 314a4ea0aab2969bc116d...cf00c (HEAD -> master)
+Author: axe-z <infoaxe-z.com>
 Date:   Wed May 1 19:03:19 2019 -0400
  
  `}
@@ -282,24 +282,53 @@ index 4d29575..e36b9bc 100644
         d importance
       </p>
       <p>tag v1.0</p>
-      <p>Tagger: axe-z info@axe-z.com </p>
+      <p>Tagger: axe-z info axe-z.com </p>
       <p>Date: Fri May 3 09:31:28 2019 -0400</p>
       <p>Sortie 1.0</p>
-      <p>commit bd76c2276858ae28e0998279acd0f2d62e125f44 (HEAD -> master, tag: v1.0)</p>
-      <p>Author: axe-z info@axe-z.com </p>
+      <p>commit bd76c2276858ae28e0998279acd...f44 (HEAD -> master, tag: v1.0)</p>
+      <p>Author: axe-z infoaxe-z.com </p>
       <p>Date: Thu May 2 22:20:13 2019 -0400</p>
       <hr />
       <h1>Stashing, mettre en pause dans un sens</h1>
       <h2>git stash</h2>
       <p>Saved working directory and index state WIP on master: 6331968 frais</p>
       <h2>git stash list</h2>
-      <p>stash@{0}: WIP on master: 6331968 frais</p>
+      <p>stash{0}: WIP on master: 6331968 frais</p>
       <hr />
       <h1>reset et reflog (time travel) --soft --mixed(par defaut) --hard</h1>
       <h2>git reset idDeCommit --soft (permet d aller dans le temps) et partir de là</h2>
       <hr />
-      <h1>git reflog (permet de voir tous les action)</h1>
-      <h2 />
+      <h1>git reflog (permet de voir tous les actions)</h1>
+      <h2>get reset (id) de replacer son HEAD la ou on veut</h2>
+      <p>maintenant on laisse le local et on va sur github...</p>
+      <hr />
+      <br />
+      <br />
+      <br />
+      <br />
+      <hr />
+      <h1>GITHUB</h1>
+      <hr />
+      <p>
+        si dans un projet local et que notre tree est commité, pret a envoyer, simplement creer sur
+        github le repo{" "}
+      </p>
+      <h2>git remote -v fera rien si aucun id nm y est associer </h2>
+      <p>
+        git remote add origin ( origin est convention pour le premier pourrait etre renommé)
+        https://github.com/axe-z/git.git (url du repo github)
+      </p>
+      <p>
+        apres faire enter sur git remote add origin https://github.com/axe-z/git.git et maintenant
+        on regarde git remote-v :
+      </p>
+      <p>
+        origin https://github.com/axe-z/git.git (fetch) <br />
+        origin https://github.com/axe-z/git.git (push)
+      </p>
+      <p>2 fois le meme url , un pour fetch et l autre push, 99.999 du temps c est pour push</p>
+      <h2>git push -u origin(le nom qu o na mis) master(la branche)</h2>
+      <h1 />
     </div>
   );
 }
