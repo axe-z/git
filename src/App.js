@@ -289,7 +289,11 @@ index 4d29575..e36b9bc 100644
       <p>Author: axe-z info@axe-z.com </p>
       <p>Date: Thu May 2 22:20:13 2019 -0400</p>
       <hr />
-      <h1>Stashing</h1>
+      <h1>Stashing, mettre en pause dans un sens</h1>
+      <h2>git stash</h2>
+      <p>Saved working directory and index state WIP on master: 6331968 frais</p>
+      <h2>git stash list</h2>
+      <p>stash@{0}: WIP on master: 6331968 frais</p>
     </div>
   );
 }
