@@ -18,6 +18,82 @@ function App() {
         <li> git merge ( on fait ca de master )</li>
         <li>git config --global alias.NomDuRacc(hist) "log --oneline --graph --decorate --all"</li>
         <li>git hist (sort l historique et la place de HEAD)</li>
+        <li>start a working area (see also: git help tutorial)</li>
+        <li>clone Clone a repository into a new directory</li>
+        <li>init Create an empty Git repository or reinitialize an existing one </li>
+        <h2>git --help</h2>
+        <li>
+          <h3>work on the current change (see also: git help everyday)</h3>
+        </li>
+        <li>
+          <strong>add:</strong> Add file contents to the index
+        </li>
+        <li>
+          <strong>mv:</strong> Move or rename a file, a directory, or a symlink
+        </li>
+        <li>
+          <strong>reset:</strong> Reset current HEAD to the specified state
+        </li>
+        <li>
+          <strong>rm:</strong> Remove files from the working tree and from the index
+        </li>
+
+        <li>
+          <h3>examine the history and state (see also: git help revisions) </h3>
+        </li>
+        <li>
+          <strong>bisect:</strong> Use binary search to find the commit that introduced a bug
+        </li>
+        <li>
+          <strong>grep:</strong> Print lines matching a pattern
+        </li>
+        <li>
+          <strong>log:</strong> Show commit logs
+        </li>
+        <li>
+          <strong>show:</strong> Show various types of objects
+        </li>
+        <li>
+          <strong>status:</strong> Show the working tree status
+        </li>
+
+        <li>
+          <h3>grow, mark and tweak your common history </h3>
+        </li>
+        <li>
+          <strong>branch:</strong> List, create, or delete branches
+        </li>
+        <li>
+          <strong>checkout:</strong> Switch branches or restore working tree files
+        </li>
+        <li>
+          <strong>commit:</strong> Record changes to the repository
+        </li>
+        <li>
+          <strong>diff:</strong> Show changes between commits, commit and working tree, etc
+        </li>
+        <li>
+          <strong>merge:</strong> Join two or more development histories together
+        </li>
+        <li>
+          <strong>rebase:</strong> Reapply commits on top of another base tip
+        </li>
+        <li>
+          <strong>tag:</strong> Create, list, delete or verify a tag object signed with GPG
+        </li>
+
+        <li>
+          <h3>collaborate (see also: git help workflows) </h3>
+        </li>
+        <li>
+          <strong>fetch:</strong> Download objects and refs from another repository
+        </li>
+        <li>
+          <strong>pull:</strong> Fetch from and integrate with another repository or a local branch
+        </li>
+        <li>
+          <strong>push:</strong> Update remote refs along with associated objects
+        </li>
       </ul>
       <hr />
       <h2>pour install: </h2>
@@ -363,6 +439,74 @@ index 4d29575..e36b9bc 100644
       <hr />
       <h1>tout sur github</h1>
       <p>on devrait rester local le plus souvent possible et une fois sur, on push sur github</p>
+      <p>
+        si on fait un nouveau repo, y met un readme avec le crochet, ajoute un .gitignore ( pour
+        Node ) et une license ( apache 2 par exemple) et fait CREATE REPOSITORY, on arrive dans un
+        repo deja initialisé ( pas les codes usuels )
+      </p>
+      <h2>clone or download</h2>
+      <p>
+        par default on a un lien https, mais on peut choisir ssh, mettre le lien sur le clipboard
+      </p>
+      <p>pour utiliser le projet:</p>
+      <h2>
+        git clone + paste du lien (https://github.com/.../testGit.git) + (option, nom du folder que
+        ca ira)
+      </h2>
+      <p>si on veut pusher la premiere fois</p>
+      <h2>git push origin master (premiere fois)</h2>
+      <hr />
+      <h1>fetch et pull</h1>
+      <p>
+        on peut editer les fichiers directement sur github et meme un commit ( comme creer une
+        nouvelle branch), mais se faisant, localement ces changement seront pas apparant.
+      </p>
+      <p>git status nous diras que tout est a jour, bine que sur github les choses ont changees</p>
+      <p>
+        si localement on edit ce fichier, et qu on fait un commit, git hub dira que notre branch
+        sera en avance sur le origin/master pas 1 commit.
+      </p>
+      <p>si on fait git push, github fera un reject... et dira de faire un fetch avant</p>
+      <h2>git fetch</h2>
+      <p>
+        ira chercher ce qu il y a de plus sur github, c est non destructif, non detruit pas ce qu on
+        a fait nous meme
+      </p>
+      <p>git nous dira qu on est pas timé, chaqu un a un commit de different, et de faire: </p>
+      <h2>git pull (pour merger)</h2>
+      <p>
+        on va recevoir ce qu on avait fait sur github, il reste juste a faire un git push, on voilà
+        , on est synchro
+      </p>
+      <hr />
+      <h1>si on veut changer le nom de notre repo sur github</h1>
+      <p>j ai jamais eu de trouble de sync mais si jamais..:</p>
+      <h2>git remote -v (localement devrait toujours dire le nom d avant)</h2>
+      <h2>
+        git remote set-url origin + copier le code du clone or download (
+        https://github.com/axe-z/Nouveaunom.git )
+      </h2>
+      <h2>git remote -v devrait avoir le bon nom</h2>
+      <hr />
+      <h1> Git Flow Feature Branch and Pushing to Github </h1>
+      <h2>git flow feature start une-nouvelle-feature</h2>
+      <h4>
+        le principe est d avoir plusieurs branche de feature, qu on amene sur la branch de DEVELOP (
+        a tout de ce qui est fait, c est tous les options ) si ca passe, ensuite, ca ira sur release
+        candidat ( ou staging ), ensuite la master une fois en place.
+      </h4>
+      <p>
+        donc a mettons qu on doit faire le FAQ d une app, un code est donné, on va sur github et si
+        on est dans le team, on peut cloner le develop... ensuite on fait git checkout -b (code-pour
+        FAQ)
+      </p>
+      <p>apres avoir coder la feature</p>
+      <h2>git push origin (code pour FAQ)</h2>.
+      <p>
+        si on est satisfait de son code, on peut demander / creer un pull request, pour la branch
+        develop
+      </p>
+      <p>ca se fait sur github, on va sur la branch (code pour FAQ), on click new pull request </p>
     </div>
   );
 }
